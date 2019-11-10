@@ -6,7 +6,8 @@
 ![Screenshot from 2019-11-09 22-44-53](https://user-images.githubusercontent.com/48977789/68539796-f4a06300-0345-11ea-909b-9f6a6f4d4ada.jpg)
 # Small Resolution Screenshot
 ![Screenshot from 2019-11-09 22-45-16](https://user-images.githubusercontent.com/48977789/68539799-f79b5380-0345-11ea-9728-4500d8484fcf.jpg)
-
+# Success & Error Messages
+![Screenshot from 2019-11-10 00-05-07](https://user-images.githubusercontent.com/48977789/68540367-3e8d4700-034e-11ea-885a-0ae161702874.jpg)
 
 # Tweeter Project
 
