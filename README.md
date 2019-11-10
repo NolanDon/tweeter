@@ -14,7 +14,7 @@
 Tweeter! A simple, single-page Twitter clone, Responsive Design, Dynamic, Comftorable Interface.
 
 ## [ Front-end Languages ]
-- HTML -
+- HTML 
 - CSS 
 - JS 
 - jQuery 
