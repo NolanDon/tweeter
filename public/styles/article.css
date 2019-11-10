@@ -1,0 +1,61 @@
+article.tweetContainer {
+  margin-bottom: 0.3mm;
+  top: -3em;
+  border: 3.5px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 245, 153);
+  font-family: 'Questrial', sans-serif;
+  font-weight: thick;
+  display: block;
+}
+
+
+article.tweetContainer:hover {
+  border: solid 4px rgb(0, 0, 0);
+  -moz-box-shadow: 5px 5px 0px rgb(0, 0, 0);
+  -webkit-box-shadow: 10px 5px 0px rgb(0, 0, 0);
+  box-shadow: 10px 10px 0px rgb(0, 0, 0);
+  font-family: 'Questrial', sans-serif;
+  font-weight: bolder;
+}
+
+article.tweetContainer p {
+  margin-top: 4%;
+  margin-left: 3%;
+  margin-right: 3%;
+  border-bottom: 2px solid;
+  font-size: 5mm;
+  overflow-wrap: break-word;
+}
+
+article.tweetContainer footer {
+  border-bottom: thick;
+  margin: center;
+  font-size: 70%;
+  margin-left: 2.5%;
+}
+
+article.tweetContainer a {
+  display: none; 
+  float: right;
+  margin-right: 1em;
+  margin-top: -3em;
+  font-size: 5mm;
+}
+
+article.tweetContainer:hover a {
+  display: inline;
+}
+
+article .articleIcons {
+  text-align: right;
+  margin-right: 30px;
+}
+
+/* article profile picture & avatar - dont change these values */
+img {
+  opacity: 1;
+  margin-top: 5mm;
+  margin-left: 1em;
+}
+

@@ -1,0 +1,57 @@
+.composeNew {
+  font-family: 'Bungee';
+  font-size: 8mm;
+  border-bottom: bold;
+  margin-bottom: 2em;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#counter {
+  float: right;
+  color: orange;
+  margin-right: 1em;
+  font-size: 6.5mm;
+}
+
+#text-field  {
+  float: left;    
+  color: rgb(0, 0, 0);
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.808);
+  font-family: 'Bungee';
+  font-size: 5mm;
+  color: rgba(0, 0, 0, 0.747);
+  width: 100%;
+}
+
+::placeholder { 
+  color: rgba(0, 0, 0, 0.747);
+  opacity: 1; 
+}
+
+#textFieldButton {
+  width: 90px;
+  height: 40px;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'Bungee';
+  background-color:rgb(253, 108, 144);
+  border-color:black;
+  border-width: 3px;
+  color: rgb(255, 255, 255);
+  font-size: 5.5mm;   
+}
+
+#newTweet {
+  margin-left: 0.5cm;
+}
+
+

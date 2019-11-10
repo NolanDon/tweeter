@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.747);
+  background-color: #fcffa3;
+  background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+  font-size: 25px;
+  font-family: 'Bungee', cursive;
+}
+
+header {
+  top: 4.8em;
+  height: 420px;
+  width: 100%;
+  background-color: orange;
+  
+}
+
+#picName {
+  text-align: center;
+  margin-top: -5em;
+}
+
+.hideOnClick {
+  display: none;
+}

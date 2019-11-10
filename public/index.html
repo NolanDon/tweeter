@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <!-- Meta info -->
+    <title>Tweeter - Home Page</title>
+    <meta charset="UTF-8">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    
+    <!-- Errors -->
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
+    
+    <!-- Fonts --> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <!-- Google Fonts 'Bungee & Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:700i&display=swap" rel="stylesheet">
+    
+    <!-- Google Font 'Questrial' -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
+    
+    <!-- Main Layout -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  
+    <!-- Nav Bar -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    
+    <!-- New-Tweet -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    
+    <!-- Responsive Design -->
+    <link rel="stylesheet" href="/styles/responsiveDesign.css" type="text/css" />
+    
+    <!-- Article Container -->
+    <link rel="stylesheet" href="/styles/article.css" type="text/css" />
+    
+    <!-- Animations -->
+    <link rel="stylesheet" href="/styles/animations.css" type="text/css" />
+    
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <!-- Header -->
+  <header class="header">
+    <div id="picName">
+      <img src="/images/zombie.png" id="zombie"> 
+      <h2>Nolan Don</h2>
+    </div>
+  </header>
+  
+  <!-- Top Nav Bar (fixed) -->
+  <nav class="navbar">
+    <span class="TWEETER">TWEETER</span>
+      <div class="writeANewTweet"> 
+        <strong class="write"><b>Write</b></strong> a new tweet 
+      </div>
+      <div id="bounceArrow">
+        <i class='fa fa-arrow-down'></i>
+      </div>  
+  </nav>
+  
+  <!-- Main Page Content -->
+  <body>
+    <main class="container responsiveDesign">
+     
+        <div class="composeNew">
+          <div class="hideOnClick">
+          <form method="POST" action="/tweets" id="newTweet" name="validForm">
+            <input id="text-field" type="text" name="text" placeholder="What are you humming about?">
+            <button id="textFieldButton" type="submit" action="/tweets" class="btn">Tweet</button> 
+            <id id="counter">140</id>
+          </div>
+            
+          <!-- Errors (do not move) -->
+          <div class="isa_error">
+              <i class="fa fa-times-circle"></i>
+              140 Character Limit.
+            </div>
+            <span class="isa_warning">
+              <i class="fa fa-warning"></i>
+              Your tweet contained no characters.
+            </span>
+            <div class="isa_success">
+              <i class="fa fa-check"></i>
+              Tweet Sent!
+            </div>
+          <!-- New Tweet Section -->
+            <section id="tweetBox"></section> 
+            
+          </form>
+        </div>
+      </div>
+      
+      
+      
+    </main>
+  </body> 
+  
+  <!-- Js scripts -->
+  <script src="/scripts/composer-char-counter.js"></script>
+  <script src="/scripts/client.js"></script>
+</html>
+
