@@ -1,8 +1,18 @@
+#Screenshots
+
+# Desktop version
+![Screenshot from 2019-11-09 22-44-53](https://user-images.githubusercontent.com/48977789/68539796-f4a06300-0345-11ea-909b-9f6a6f4d4ada.jpg)
+# 13-15" Resolution version
+![Screenshot from 2019-11-09 22-45-16 (1)](https://user-images.githubusercontent.com/48977789/68539798-f702bd00-0345-11ea-9b06-dd226c71f25d.jpg)
+ # Smaller than 13" Resolution version
+![Screenshot from 2019-11-09 22-45-16](https://user-images.githubusercontent.com/48977789/68539799-f79b5380-0345-11ea-9728-4500d8484fcf.jpg)
+
+
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This Project was built on by my to excercise my knowledge of HTML, CSS, JS, jQuery and AJAX front-end skills and Node, Express and MongoDB back-end skills.
 
 ## Getting Started
 
@@ -15,3 +25,4 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Nodemon
