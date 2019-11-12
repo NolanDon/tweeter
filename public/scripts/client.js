@@ -1,17 +1,17 @@
 $( document ).ready(function() {
-
+  
   const createTweetElement = function(tweet) { 
 
-    // Article Structure 
+    // Article Template
     const tweetString = `
      <article class=${"tweetContainer"}>           
-        <div>
-          <img src=${tweet.user.avatars}>${tweet.user.name}
-        </div>
-         <div class="handle">
-           <a>${tweet.user.handle}</a>
-         </div>
-          <p>${(tweet.content.text)}</p>        
+      <div>
+        <img src=${tweet.user.avatars}>${tweet.user.name}
+      </div>
+      <div class="handle">
+        <a>${tweet.user.handle}</a>
+      </div>
+      <p>${(tweet.content.text)}</p>        
         <footer>
           <h5>${timeSince(tweet.created_at)}  
             <div class="articleIcons">
@@ -19,12 +19,12 @@ $( document ).ready(function() {
               <i class="fas fa-flag"></i>
               <i class="fas fa-retweet"></i>
             </div>
-           </h5>
-         </footer>
-       </article>`;
+          </h5>
+        </footer>
+      </article>`;
     return tweetString;
   };
-
+  
    // Load the tweets
   const loadTweets = function() {
     event.preventDefault();
@@ -33,31 +33,39 @@ $( document ).ready(function() {
       url: "/tweets",
       dataType: "json"
     })
-      .done(function(data) {
-        $("#tweetBox").empty();
-        renderTweets(data);
-      })
-      .fail(function() {
-        console.log("error loading tweets");
-      });
+    .done(function(data) {
+      $("#tweetBox").empty();
+      renderTweets(data);
+    })
+    .fail(function() {
+    });
   };
-  // rendering new tweets
+  
   const renderTweets = function(tweets) {
-   for (let tweet of tweets) {
+   // Loop through tweets
+   // Call createTweetElement for each tweet
+   // Take return value and appends it to the tweets container
+   
+    for (let tweet of tweets) {
       let tweetString = createTweetElement(tweet)
       $("#tweetBox").prepend(tweetString);
     }
   };
-    // Subit form && POST AJAX request for new tweets
+  
   loadTweets();
+  
+  // Submit form
   $(function() {  
     const $form = $('#newTweet');
     $form.on('submit', function (event) {
       event.preventDefault()
       const info = $(this).serialize()
-      const textFieldLength = $('#text-field').val().length
-      const limit = 140;
-      if (textFieldLength > limit) {
+      
+     // Check for tweet if over 140 characters
+     // If true throw error
+     const textFieldLength = $('#text-field').val().length
+     const textLimit = 140;
+      if (textFieldLength > textLimit) {
         $(".isa_error").show()
         setTimeout( function () {
           $(".isa_error").hide()
@@ -65,6 +73,8 @@ $( document ).ready(function() {
         return false;  
       } 
       
+      // Check for empty tweet
+      // Throw error if true
       if ($('#text-field').val() === '') {
        $(".isa_warning").show()
        setTimeout( function () {
@@ -73,7 +83,9 @@ $( document ).ready(function() {
         return false;
       } 
 
-      $.ajax({
+      // POST request when submit tweet - Reset Form
+      // Show success message if success
+       $.ajax({
         type: "POST",
         url: '/tweets',
         data: info,
@@ -91,7 +103,6 @@ $( document ).ready(function() {
   })
 });
 
-  // Time Stamp Function
 const timeSince = function(date) {
   // function found at https://stackoverflow.com/a/3177838
   let seconds = Math.floor((new Date() - date) / 1000);
@@ -118,9 +129,4 @@ const timeSince = function(date) {
   return Math.floor(seconds) + " seconds ago";
 };
 
-  // Bounce arrow slide composeNew
-  $("#bounceArrow").on('click', function () {
-    $(".hideOnClick").slideToggle("slow", function() { 
-    $("#text-field").focus();
-    })
-  });
+
