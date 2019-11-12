@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 const createTweetElement = function(tweet) { 
 
   const escape =  function(str) {
@@ -16,7 +18,7 @@ const createTweetElement = function(tweet) {
        </div>
         <p>${escape(tweet.content.text)}</p>        
        <footer>
-         <h5>${getTheCurrentTime(tweet.created_at)}  
+         <h5>${timeSince(tweet.created_at)}  
             <div class="articleIcons">
              <i class="fas fa-heart"></i>
               <i class="fas fa-flag"></i>
@@ -52,7 +54,7 @@ const renderTweets = function(tweets) {
   }
 };
 
-$( document ).ready(function() {
+
   loadTweets();
   $(function() {  
     const $form = $('#newTweet');
@@ -96,21 +98,31 @@ $( document ).ready(function() {
 });
 
 
-function getTheCurrentTime(date) {
-  var currentDate = Date.now();
-  var howLongAgoSeconds = (currentDate - date) / 1000 / 60;
-  var howLongAgoMinutes = (currentDate - date) / 1000 / 60;
-  var howLongAgoHours = (currentDate - date) / 1000 / 60 / 60;
-  if (howLongAgoMinutes < 1) {
-    return `a moment ago`;
-  } else if (howLongAgoMinutes > 1 && howLongAgoMinutes < 60) {
-    return `${Math.floor(howLongAgoMinutes)} minutes ago`;
-  } else if (howLongAgoMinutes > 60 && howLongAgoHours < 24) {
-    return `${Math.floor(howLongAgoHours)} hours ago`;
-  } else if (howLongAgoHours > 24) {
-    return `${Math.floor(howLongAgoHours / 24)} days ago`;
+const timeSince = function(date) {
+  // function found at https://stackoverflow.com/a/3177838
+  let seconds = Math.floor((new Date() - date) / 1000);
+  let interval = Math.floor(seconds / 31536000);
+  if (interval > 1) {
+    return interval + " years ago";
   }
-}
+  interval = Math.floor(seconds / 2592000);
+  if (interval > 1) {
+    return interval + " months ago";
+  }
+  interval = Math.floor(seconds / 86400);
+  if (interval > 1) {
+    return interval + " days ago";
+  }
+  interval = Math.floor(seconds / 3600);
+  if (interval > 1) {
+    return interval + " hours ago";
+  }
+  interval = Math.floor(seconds / 60);
+  if (interval > 1) {
+    return interval + " minutes ago";
+  }
+  return Math.floor(seconds) + " seconds ago";
+};
 
   // Bounce arrow slide composeNew (Don't change these values)
   $("#bounceArrow").on('click', function () {
