@@ -2,7 +2,7 @@
   display: none;
 }
 
-.composeNew {
+.new-tweet {
   font-family: 'Bungee';
   font-size: 8mm;
   border-bottom: bold;
@@ -31,12 +31,7 @@
   width: 100%;
 }
 
-::placeholder { 
-  color: rgba(0, 0, 0, 0.747);
-  opacity: 1; 
-}
-
-#textFieldButton {
+#text-field-button {
   width: 90px;
   height: 40px;
   text-align: left;
@@ -49,5 +44,12 @@
   color: rgb(255, 255, 255);
   font-size: 5.5mm;   
 }
+
+::placeholder { 
+  color: rgba(0, 0, 0, 0.747);
+  opacity: 1; 
+}
+
+
 
 
