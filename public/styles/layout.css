@@ -13,19 +13,12 @@ body {
   font-family: 'Bungee', cursive;
 }
 
-header {
-  top: 4.8em;
-  height: 420px;
-  width: 100%;
-  background-color: orange;
-  
+.container {
+  width: auto;
+  min-width: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-#picName {
-  text-align: center;
-  margin-top: -5em;
-}
 
-.hideOnClick {
-  display: none;
-}
+
