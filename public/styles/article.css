@@ -1,14 +1,14 @@
 article.tweetContainer {
-  margin-bottom: 2.5mm;
+  margin-bottom: 3mm;
   top: -3em;
+  width: 100%;
+  border: none;
   border: 3.5px solid rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   background-color: rgb(255, 245, 153);
   font-family: 'Questrial', sans-serif;
   font-weight: thick;
-  display: block;
 }
-
 
 article.tweetContainer:hover {
   border: solid 4px rgb(0, 0, 0);
@@ -24,7 +24,7 @@ article.tweetContainer p {
   margin-left: 3%;
   margin-right: 3%;
   border-bottom: 2px solid;
-  font-size: 5mm;
+  font-size: 6mm;
   overflow-wrap: break-word;
 }
 
