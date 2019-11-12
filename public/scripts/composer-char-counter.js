@@ -5,14 +5,14 @@ $( document ).ready(function() {
     let length = $(this).val().length;
 
     if (length >= 140) {
-      $('#counter').css('color', 'red'); // Counter && Color adjuster
+      $('#counter').css('color', 'red');
     } else if (length > 100) {
       $('#counter').css('color', 'orange'); 
     } else if (length > 80 || length === 0) {
       $('#counter').css('color', 'orange');
     }
-      let remainingChar = count - length;
-  $('#counter').text(remainingChar);
+    let remainingChar = count - length;
+    $('#counter').text(remainingChar);
   })
 });
 
