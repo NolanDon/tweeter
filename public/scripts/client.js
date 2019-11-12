@@ -1,36 +1,31 @@
 $( document ).ready(function() {
 
-const createTweetElement = function(tweet) { 
+  const createTweetElement = function(tweet) { 
 
-  const escape =  function(str) {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  }
-              // Dynamic Article Generator (Do not change these values)
-  const tweetString = `
-    <article class=${"tweetContainer"}>           
-      <div>
-        <img src=${tweet.user.avatars}>${tweet.user.name}
-       </div>
-       <div class="handle">
-         <a>${tweet.user.handle}</a>
-       </div>
-        <p>${escape(tweet.content.text)}</p>        
-       <footer>
-         <h5>${timeSince(tweet.created_at)}  
+    // Article Structure 
+    const tweetString = `
+     <article class=${"tweetContainer"}>           
+        <div>
+          <img src=${tweet.user.avatars}>${tweet.user.name}
+        </div>
+         <div class="handle">
+           <a>${tweet.user.handle}</a>
+         </div>
+          <p>${(tweet.content.text)}</p>        
+        <footer>
+          <h5>${timeSince(tweet.created_at)}  
             <div class="articleIcons">
-             <i class="fas fa-heart"></i>
+              <i class="fas fa-heart"></i>
               <i class="fas fa-flag"></i>
-             <i class="fas fa-retweet"></i>
-           </div>
-          </h5>
-       </footer>
-     </article>`;
-  return tweetString;
-};
+              <i class="fas fa-retweet"></i>
+            </div>
+           </h5>
+         </footer>
+       </article>`;
+    return tweetString;
+  };
 
- // Load the tweets
+   // Load the tweets
   const loadTweets = function() {
     event.preventDefault();
     $.ajax({
@@ -43,18 +38,17 @@ const createTweetElement = function(tweet) {
         renderTweets(data);
       })
       .fail(function() {
-        console.log("error");
+        console.log("error loading tweets");
       });
   };
-
-const renderTweets = function(tweets) {
-  for (let tweet of tweets) {
-    let tweetString = createTweetElement(tweet)
-    $("#tweetBox").prepend(tweetString);
-  }
-};
-
-
+  // rendering new tweets
+  const renderTweets = function(tweets) {
+   for (let tweet of tweets) {
+      let tweetString = createTweetElement(tweet)
+      $("#tweetBox").prepend(tweetString);
+    }
+  };
+    // Subit form && POST AJAX request for new tweets
   loadTweets();
   $(function() {  
     const $form = $('#newTweet');
@@ -97,7 +91,7 @@ const renderTweets = function(tweets) {
   })
 });
 
-
+  // Time Stamp Function
 const timeSince = function(date) {
   // function found at https://stackoverflow.com/a/3177838
   let seconds = Math.floor((new Date() - date) / 1000);
@@ -124,7 +118,7 @@ const timeSince = function(date) {
   return Math.floor(seconds) + " seconds ago";
 };
 
-  // Bounce arrow slide composeNew (Don't change these values)
+  // Bounce arrow slide composeNew
   $("#bounceArrow").on('click', function () {
     $(".hideOnClick").slideToggle("slow", function() { 
     $("#text-field").focus();
