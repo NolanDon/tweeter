@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-  $(".composeNew #text-field").keyup(function () {
+  $(".new-tweet #text-field").keyup(function () {
     let count = 140;
     let length = $(this).val().length;
 
