@@ -12,7 +12,7 @@
     <!-- Errors -->
     <link rel="stylesheet" href="/styles/error.css" type="text/css" />
     
-    <!-- Fonts --> 
+    <!-- Article Icons --> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     
     <!-- Google Fonts 'Bungee & Source Sans Pro -->
@@ -24,6 +24,9 @@
     <!-- Main Layout -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   
+    <!-- Header -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    
     <!-- Nav Bar -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     
@@ -45,64 +48,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   
-  <!-- Header -->
+  <!-- header avatar and username -->
   <header class="header">
-    <div id="picName">
-      <img src="/images/zombie.png" id="zombie"> 
-      <h2>Nolan Don</h2>
-    </div>
+    <img src="/images/zombie.png" id="zombie"> 
+    <h2>Nolan Don</h2>
   </header>
   
-  <!-- Top Nav Bar (fixed) -->
+  <!-- top nav bar (fixed) -->
   <nav class="navbar">
-    <span class="TWEETER">TWEETER</span>
-      <div class="writeANewTweet"> 
-        <strong class="write"><b>Write</b></strong> a new tweet 
+    <span id="nav-left">
+      <div>TWEETER</div>
+    </span>
+    <span id="nav-right">
+      <div class="writeANewTweet">
+        <strong class="write"><b>Write</b></strong> a new tweet
       </div>
-      <div id="bounceArrow">
-        <i class='fa fa-arrow-down'></i>
-      </div>  
+    </span>
+    <div id="bouncingArrow">
+      <i class='fa fa-arrow-down'></i>
+    </div>
   </nav>
   
-  <!-- Main Page Content -->
+  <!-- main page content -->
   <body>
     <main class="container responsiveDesign">
-     
-        <div class="composeNew">
-          <div class="hideOnClick">
+      
+      <div class="composeNew">
+        <div class="hideOnClick">
           <form method="POST" action="/tweets" id="newTweet" name="validForm">
             <input id="text-field" type="text" name="text" placeholder="What are you humming about?">
-            <button id="textFieldButton" type="submit" action="/tweets" class="btn">Tweet</button> 
+            <button id="textFieldButton" type="submit" action="/tweets" class="btn">Tweet</button>
             <id id="counter">140</id>
-          </div>
+            </div>
             
-          <!-- Errors (do not move) -->
-          <div class="isa_error">
+            <!-- errors -->
+            <div class="isa_error">
               <i class="fa fa-times-circle"></i>
               140 Character Limit.
             </div>
             <span class="isa_warning">
               <i class="fa fa-warning"></i>
-              Your tweet contained no characters.
+              Your tweet needs characters.
             </span>
             <div class="isa_success">
               <i class="fa fa-check"></i>
               Tweet Sent!
             </div>
-          <!-- New Tweet Section -->
-            <section id="tweetBox"></section> 
             
+            <!-- new tweet section -->
+            <section id="tweetBox"></section>
           </form>
-        </div>
-      </div>
-      
-      
-      
+      </div>   
     </main>
   </body> 
-  
-  <!-- Js scripts -->
+  <!-- counter -->
   <script src="/scripts/composer-char-counter.js"></script>
+  <!-- bouncingArrow script -->
+  <script src="/scripts/arrow.js"></script>
+  <!-- client-side -->
   <script src="/scripts/client.js"></script>
 </html>
 
