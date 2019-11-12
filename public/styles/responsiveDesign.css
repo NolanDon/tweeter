@@ -1,18 +1,3 @@
-/* @media only screen and (min-width: 1400px) {
-  
-  .composeNew {
-    font-family: 'Bungee';
-    font-size: 8mm;
-    border-bottom: bold;
-    margin-bottom: 2em;
-    margin-top: 5em;
-  }
-  
-  header {
-    width: auto;
-  }
-} */
-
 @media only screen and (min-width: 1024px) {
   
   .navbar {
@@ -26,7 +11,7 @@
     background: transparent;
   }
   
-  .composeNew {
+  .new-tweet {
     margin-top: 150px;
     float: right;
     width: 55%;
