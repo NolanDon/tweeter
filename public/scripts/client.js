@@ -34,7 +34,7 @@ $( document ).ready(function() {
       dataType: "json"
     })
     .done(function(data) {
-      $("#tweetBox").empty();
+      $("#new-article").empty();
       renderTweets(data);
     })
     .fail(function() {
@@ -48,7 +48,7 @@ $( document ).ready(function() {
    
     for (let tweet of tweets) {
       let tweetString = createTweetElement(tweet)
-      $("#tweetBox").prepend(tweetString);
+      $("#new-article").prepend(tweetString);
     }
   };
   
@@ -96,7 +96,7 @@ $( document ).ready(function() {
             $(".isa_success").hide()
           },4000)
           let response = createTweetElement(res)
-          $("#tweetBox").prepend(response)
+          $("#new-article").prepend(response)
         }
       })  
     })
