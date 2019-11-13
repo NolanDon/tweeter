@@ -48,11 +48,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   
+  
   <!-- header avatar and username -->
   <header class="header">
     <img src="/images/zombie.png" id="zombie"> 
     <h2>Nolan Don</h2>
   </header>
+  
   
   <!-- top nav bar (fixed) -->
   <nav class="navbar">
@@ -69,6 +71,7 @@
     </div>
   </nav>
   
+  
   <!-- main page content -->
   <body>
     <main class="container responsiveDesign">
@@ -79,25 +82,27 @@
             <input id="text-field" type="text" name="text" placeholder="What are you humming about?">
             <button id="text-field-button" type="submit" action="/tweets" class="btn">Tweet</button>
             <id id="counter">140</id>
-            </div>
-            
-            <!-- errors -->
-            <div class="isa_error">
-              <i class="fa fa-times-circle"></i>
-              140 Character Limit.
-            </div>
-            <span class="isa_warning">
-              <i class="fa fa-warning"></i>
-              Your tweet needs characters.
-            </span>
-            <div class="isa_success">
-              <i class="fa fa-check"></i>
-              Tweet Sent!
-            </div>
-            
-            <!-- new tweet section -->
-            <section id="new-article"></section>
           </form>
+        </div> 
+        
+        
+        <!-- errors -->
+        <div class="isa_error">
+          <i class="fa fa-times-circle"></i>
+           140 Character Limit.
+        </div>
+        <span class="isa_warning">
+          <i class="fa fa-warning"></i>
+          Your tweet needs characters.
+        </span>
+        <div class="isa_success">
+          <i class="fa fa-check"></i>
+          Tweet Sent!
+        </div>
+        
+       
+        <!-- new tweet section -->
+        <section id="new-article"></section>
       </div>   
     </main>
   </body> 
