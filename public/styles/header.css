@@ -1,0 +1,14 @@
+.main-header { 
+  text-align: center;
+  top: 120px;
+  height: 400px;
+  width: 100%;
+  margin: auto;
+  background-color: orange;
+}
+
+#zombie {
+  width: 200px;
+  margin-top: 95px;
+  position: relative;
+}

@@ -1,0 +1,38 @@
+@media only screen and (min-width: 1024px) {
+  
+  .constainer {
+    display:flex;
+  }
+  
+  .navbar {
+    background-color: rgb(55, 122, 161);
+  }
+  
+  .main-header {
+    margin-top: 100px;
+    width: 45%;
+    float: left;
+    background: transparent;
+  } 
+  
+  .new-tweet {
+    margin-top: 150px;
+    float: right;
+    width: 55%;
+  }
+    
+  #zombie {
+    width: 270px;
+    margin-top: 80px;
+    position: relative;
+  }
+}
+
+
+
+
+
+
+
+
+    
