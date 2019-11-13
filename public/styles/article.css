@@ -1,13 +1,12 @@
 article.tweetContainer {
-  margin-bottom: 3mm;
-  top: -3em;
   width: 100%;
-  border: none;
-  border: 3.5px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 245, 153);
-  font-family: 'Questrial', sans-serif;
+  height: 100%;
+  margin-bottom: 3mm;
   font-weight: thick;
+  color: rgb(0, 0, 0);
+  border: 3.5px solid rgb(0, 0, 0);
+  font-family: 'Questrial', sans-serif;
+  background-color: rgb(255, 245, 153);
 }
 
 article.tweetContainer:hover {
@@ -20,42 +19,58 @@ article.tweetContainer:hover {
 }
 
 article.tweetContainer p {
-  margin-top: 4%;
-  margin-left: 3%;
-  margin-right: 3%;
-  border-bottom: 2px solid;
-  font-size: 6mm;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 5mm; 
   overflow-wrap: break-word;
 }
 
 article.tweetContainer footer {
-  border-bottom: thick;
-  margin: center;
-  font-size: 70%;
-  margin-left: 2.5%;
+  display: flex;
+  font-size: 4mm;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+  justify-content: space-between;
+  border-top: 2px solid black;
 }
 
-article.tweetContainer a {
-  display: none; 
-  float: right;
-  margin-right: 1em;
-  margin-top: -3em;
+article header {
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+article header img {
+  height: 50px;
+}
+
+article header .username {
+  font-size: 6mm;
+}
+
+article footer a {
+  margin-top: 10px;
   font-size: 5mm;
 }
 
-article.tweetContainer:hover a {
-  display: inline;
+.articleIcons {
+  margin-top: 10px;
+  opacity: 0;
 }
 
-article .articleIcons {
-  text-align: right;
-  margin-right: 30px;
-}
-
-/* article profile picture & avatar - dont change these values */
-article img {
+article.tweetContainer:hover .articleIcons {
   opacity: 1;
-  margin-top: 5mm;
-  margin-left: 1em;
 }
-
+article header #handle {
+  opacity: 0;
+  font-size: 5mm;
+  margin-right: 10px;
+}
+article.tweetContainer:hover #handle {
+  opacity: 1;
+}
