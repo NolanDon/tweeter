@@ -41,6 +41,7 @@ $( document ).ready(function() {
     });
   };
   
+  
   const renderTweets = function(tweets) {
    // Loop through tweets
    // Call createTweetElement for each tweet
@@ -54,53 +55,52 @@ $( document ).ready(function() {
   
   loadTweets();
   
+    
   // Submit form
-  $(function() {  
-    const $form = $('#newTweet');
-    $form.on('submit', function (event) {
-      event.preventDefault()
-      const info = $(this).serialize()
+  const $form = $('#newTweet');
+  $form.on('submit', function (event) {
+    event.preventDefault()
+    const info = $(this).serialize()
       
-     // Check for tweet if over 140 characters
-     // If true throw error
-     const textFieldLength = $('#text-field').val().length
-     const textLimit = 140;
-      if (textFieldLength > textLimit) {
-        $(".isa_error").show()
+    // Check for tweet if over 140 characters
+    // If true throw error
+    const textFieldLength = $('#text-field').val().length
+    const textLimit = 140;
+    if (textFieldLength > textLimit) {
+      $(".isa_error").show()
+      setTimeout( function () {
+        $(".isa_error").hide()
+      },4000)
+      return false;  
+    } 
+      
+    // Check for empty tweet
+    // Throw error if true
+    if ($('#text-field').val() === '') {
+      $(".isa_warning").show()
+      setTimeout( function () {
+        $(".isa_warning").hide()
+      },4000) 
+      return false;
+    } 
+      
+    // POST request when submit tweet - Reset Form
+    // Show success message if success
+    $.ajax({
+      type: "POST",
+      url: '/tweets',
+      data: info,
+      success: function(res) {
+        $('#text-field').val('');
+        $(".isa_success").show()
         setTimeout( function () {
-          $(".isa_error").hide()
+          $(".isa_success").hide()
         },4000)
-        return false;  
-      } 
-      
-      // Check for empty tweet
-      // Throw error if true
-      if ($('#text-field').val() === '') {
-       $(".isa_warning").show()
-       setTimeout( function () {
-         $(".isa_warning").hide()
-        },4000) 
-        return false;
-      } 
-
-      // POST request when submit tweet - Reset Form
-      // Show success message if success
-       $.ajax({
-        type: "POST",
-        url: '/tweets',
-        data: info,
-        success: function(res) {
-          $('#text-field').val('');
-          $(".isa_success").show()
-          setTimeout( function () {
-            $(".isa_success").hide()
-          },4000)
-          let response = createTweetElement(res)
-          $("#new-article").prepend(response)
-        }
-      })  
-    })
-  })
+        let response = createTweetElement(res)
+        $("#new-article").prepend(response)
+      }
+    })  
+  });
 });
 
 const timeSince = function(date) {
