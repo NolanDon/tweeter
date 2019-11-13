@@ -53,7 +53,7 @@ article .articleIcons {
 }
 
 /* article profile picture & avatar - dont change these values */
-img {
+article img {
   opacity: 1;
   margin-top: 5mm;
   margin-left: 1em;
