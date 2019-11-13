@@ -8,12 +8,15 @@
   position: fixed;
   color: #FFFFFF;
   background-color: transparent;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  padding-top: 10px;
 }
 
 #nav-left {
   float: left;
   padding-top: 3px;
-  font-size: 8mm;
+  font-size: 10mm;
   color: #fffdff;
 }
 
