@@ -1,5 +1,5 @@
 $("#bouncingArrow").on('click', function () {
-  $(".hideOnClick").slideToggle("slow", function() { 
+  $(".hide").slideToggle("slow", function() { 
   $("#text-field").focus();
   })
 });
