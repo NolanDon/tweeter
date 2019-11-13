@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     
     <!-- Responsive Design -->
-    <link rel="stylesheet" href="/styles/responsiveDesign.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/responsive.css" type="text/css" />
     
     <!-- Article Container -->
     <link rel="stylesheet" href="/styles/article.css" type="text/css" />
@@ -73,16 +73,16 @@
   
   <!-- main page content -->
   <body>
-    <main class="container responsiveDesign">
+    <main class="container responsive">
       
       <div class="new-tweet">
-        <div class="hideOnClick">
+        <div class="hide">
           <form method="POST" action="/tweets" id="newTweet" name="validForm">
             <input id="text-field" type="text" name="text" placeholder="What are you humming about?">
             <button id="text-field-button" type="submit" action="/tweets" class="btn">Tweet</button>
             <id id="counter">140</id>
           </form>
-        </div> 
+        </div>
         
         <!-- errors -->
         <div class="isa_error">
