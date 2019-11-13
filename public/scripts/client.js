@@ -5,21 +5,25 @@ $( document ).ready(function() {
     // Article Template
     const tweetString = `
      <article class=${"tweetContainer"}>           
-      <div>
-        <img src=${tweet.user.avatars}>${tweet.user.name}
-      </div>
-      <div class="handle">
-        <a>${tweet.user.handle}</a>
-      </div>
-      <p>${(tweet.content.text)}</p>        
-        <footer>
-          <h5>${timeSince(tweet.created_at)}  
-            <div class="articleIcons">
-              <i class="fas fa-heart"></i>
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-            </div>
-          </h5>
+      <header>
+        <div class="username">
+          <img src=${tweet.user.avatars}>
+          ${tweet.user.name}
+        </div>
+        <div id="handle">
+          <a>${tweet.user.handle}</a>
+        </div>
+      </header> 
+      <body> 
+        <p>${(tweet.content.text)}</p>      
+      </body> 
+      <footer>
+        <a>${timeSince(tweet.created_at)}</a>
+          <div class="articleIcons">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i> 
+          </div> 
         </footer>
       </article>`;
     return tweetString;
@@ -54,8 +58,7 @@ $( document ).ready(function() {
   };
   
   loadTweets();
-  
-    
+   
   // Submit form
   const $form = $('#newTweet');
   $form.on('submit', function (event) {
@@ -100,12 +103,12 @@ $( document ).ready(function() {
         $("#new-article").prepend(response)
       }
     })  
-  });
+  })
 });
 
 const timeSince = function(date) {
   // function found at https://stackoverflow.com/a/3177838
-  let seconds = Math.floor((new Date() - date) / 1000);
+  let seconds = Math.floor(((new Date() - date) / 1000));
   let interval = Math.floor(seconds / 31536000);
   if (interval > 1) {
     return interval + " years ago";
