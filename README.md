@@ -1,12 +1,12 @@
 # Final Version 
 
-# Screenshots
-![Screenshot from 2019-11-09 22-45-16 (1)](https://user-images.githubusercontent.com/48977789/68539798-f702bd00-0345-11ea-9b06-dd226c71f25d.jpg)
-# Desktop Screenshot
-![Screenshot from 2019-11-09 22-44-53](https://user-images.githubusercontent.com/48977789/68539796-f4a06300-0345-11ea-909b-9f6a6f4d4ada.jpg)
-# Small Resolution Screenshot
-![Screenshot from 2019-11-09 22-45-16](https://user-images.githubusercontent.com/48977789/68539799-f79b5380-0345-11ea-9728-4500d8484fcf.jpg)
-# Success & Error Messages
+# [Homepage] Responsive with all devices
+![Screenshot from 2019-12-09 20-49-44](https://user-images.githubusercontent.com/48977789/70493867-73fc9000-1ac6-11ea-9ea7-0782e42d36df.png)
+# [Desktop] Screenshot
+![Screenshot from 2019-12-09 20-52-27](https://user-images.githubusercontent.com/48977789/70493866-73fc9000-1ac6-11ea-923c-8136c184233d.png)
+# Success & Error Messages with JQuery
+![Screenshot from 2019-12-09 20-48-01](https://user-images.githubusercontent.com/48977789/70493869-74952680-1ac6-11ea-889e-1f1a3d16fbaf.png)
+![Screenshot from 2019-12-09 20-48-35](https://user-images.githubusercontent.com/48977789/70493868-74952680-1ac6-11ea-9ac0-6bdaa36ecf25.png)
 ![Screenshot from 2019-11-10 00-05-07](https://user-images.githubusercontent.com/48977789/68540367-3e8d4700-034e-11ea-885a-0ae161702874.jpg)
 
 # Tweeter Project
