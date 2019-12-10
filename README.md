@@ -1,4 +1,4 @@
-# Final Version 
+# Tweeter App
 
 # Mobile Homepage Screenshot
 ![Screenshot from 2019-12-09 20-49-44](https://user-images.githubusercontent.com/48977789/70494126-5a0f7d00-1ac7-11ea-93f4-5d01947f3e12.png)
