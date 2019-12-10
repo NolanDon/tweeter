@@ -2,9 +2,9 @@
 
 # Mobile Homepage Screenshot
 ![Screenshot from 2019-12-09 20-49-44](https://user-images.githubusercontent.com/48977789/70494126-5a0f7d00-1ac7-11ea-93f4-5d01947f3e12.png)
-# [Desktop] Screenshot
+# Desktop Screenshot
 ![Screenshot from 2019-12-09 20-52-27](https://user-images.githubusercontent.com/48977789/70493866-73fc9000-1ac6-11ea-923c-8136c184233d.png)
-# Success & Error Messages with JQuery
+# Success & Error Messages
 ![Screenshot from 2019-12-09 20-48-01](https://user-images.githubusercontent.com/48977789/70493869-74952680-1ac6-11ea-889e-1f1a3d16fbaf.png)
 ![Screenshot from 2019-12-09 20-48-35](https://user-images.githubusercontent.com/48977789/70493868-74952680-1ac6-11ea-9ac0-6bdaa36ecf25.png)
 ![Screenshot from 2019-11-10 00-05-07](https://user-images.githubusercontent.com/48977789/68540367-3e8d4700-034e-11ea-885a-0ae161702874.jpg)
