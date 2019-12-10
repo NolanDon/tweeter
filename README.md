@@ -1,7 +1,7 @@
 # Final Version 
 
-# [Homepage] Responsive with all devices
-![Screenshot from 2019-12-09 20-49-44](https://user-images.githubusercontent.com/48977789/70493867-73fc9000-1ac6-11ea-9ea7-0782e42d36df.png)
+# Mobile Homepage Screenshot
+![Screenshot from 2019-12-09 20-49-44](https://user-images.githubusercontent.com/48977789/70494126-5a0f7d00-1ac7-11ea-93f4-5d01947f3e12.png)
 # [Desktop] Screenshot
 ![Screenshot from 2019-12-09 20-52-27](https://user-images.githubusercontent.com/48977789/70493866-73fc9000-1ac6-11ea-923c-8136c184233d.png)
 # Success & Error Messages with JQuery
